@@ -39,7 +39,8 @@ st.write("The name on smoothie will be: ", name_on_order)
 #session = get_active_session()
 cnx = st.connection("snowflake") #adding snowflake session
 session = cnx.session() #adding snowflake session
-my_dataframe = session.table("smoothies.public.fruit_options").select(col('FRUIT_NAME'))
+#my_dataframe = session.table("smoothies.public.fruit_options").select(col('FRUIT_NAME'))
+my_dataframe = session.table("smoothies.public.fruit_options").select(col('SEARCH_ON'))
 #st.dataframe(data=my_dataframe, use_container_width=True)
 
 # Define options
